@@ -9,6 +9,9 @@ const ACCEL = 10.0
 
 var age: float = 0
 
+func _ready() -> void:
+	Events.ExitHit.connect(exit_was_hit)
+
 func _physics_process(delta: float) -> void:
 	age += delta
 	DoNav(delta)
@@ -26,3 +29,6 @@ func DoNav(delta: float):
 	velocity = direction * SPEED
 
 	move_and_slide()
+
+func exit_was_hit():
+	SPEED = 0.0
