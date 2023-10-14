@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://g5d4oae18cnk"
-path.s3tc="res://.godot/imported/it_e_3-4cobblestonebig02a.png-0724b24dcf8ee5de026698a746631007.s3tc.ctex"
+uid="uid://wjhiu1sgw17a"
+path.s3tc="res://.godot/imported/diffus.tga-fafb824152e0398e9248c663b4d624f0.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tile1/it_e_3-4cobblestonebig02a.png"
-dest_files=["res://.godot/imported/it_e_3-4cobblestonebig02a.png-0724b24dcf8ee5de026698a746631007.s3tc.ctex"]
+source_file="res://Textures/Bricks/diffus.tga"
+dest_files=["res://.godot/imported/diffus.tga-fafb824152e0398e9248c663b4d624f0.s3tc.ctex"]
 
 [params]
 
@@ -24,8 +24,8 @@ compress/normal_map=0
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=7
-roughness/src_normal="res://tile1/normal.tga"
+roughness/mode=0
+roughness/src_normal=""
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

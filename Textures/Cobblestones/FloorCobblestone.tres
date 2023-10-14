@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=5 format=3 uid="uid://con34ph8g52jp"]
+
+[ext_resource type="Texture2D" uid="uid://gutgifoh7dv4" path="res://Textures/Cobblestones/diffuse.tga" id="1_up8gl"]
+[ext_resource type="Texture2D" uid="uid://g5d4oae18cnk" path="res://Textures/Cobblestones/it_e_3-4cobblestonebig02a.png" id="2_gta2y"]
+[ext_resource type="Texture2D" uid="uid://b4pvragn4m437" path="res://Textures/Cobblestones/normal.tga" id="3_igcre"]
+[ext_resource type="Texture2D" uid="uid://dn7uk2p5b8ugu" path="res://Textures/Cobblestones/specular.tga" id="4_3ijmq"]
+
+[resource]
+albedo_texture = ExtResource("1_up8gl")
+metallic = 0.22
+roughness = 0.91
+roughness_texture = ExtResource("4_3ijmq")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_igcre")
+heightmap_scale = 0.636
+heightmap_texture = ExtResource("2_gta2y")

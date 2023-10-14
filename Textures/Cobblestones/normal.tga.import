@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2xdanvqmghr2"
-path.s3tc="res://.godot/imported/256_128rustv.jpg-ec6c9275ed92f749696c003dbc0ff58a.s3tc.ctex"
+uid="uid://b4pvragn4m437"
+path.s3tc="res://.godot/imported/normal.tga-cc5240b329e84c19fd089ab06dcb9960.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://256_128rustv.jpg"
-dest_files=["res://.godot/imported/256_128rustv.jpg-ec6c9275ed92f749696c003dbc0ff58a.s3tc.ctex"]
+source_file="res://Textures/Cobblestones/normal.tga"
+dest_files=["res://.godot/imported/normal.tga-cc5240b329e84c19fd089ab06dcb9960.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://tile1/normal.tga"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

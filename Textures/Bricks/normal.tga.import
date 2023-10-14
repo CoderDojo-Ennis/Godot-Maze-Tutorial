@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4pvragn4m437"
-path.s3tc="res://.godot/imported/normal.tga-845dd19de23cac5b9f76f2e730e1d954.s3tc.ctex"
+uid="uid://dox7olk6lym2p"
+path.s3tc="res://.godot/imported/normal.tga-7763ea122af3c3d3a8dbdf065cc0edec.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tile1/normal.tga"
-dest_files=["res://.godot/imported/normal.tga-845dd19de23cac5b9f76f2e730e1d954.s3tc.ctex"]
+source_file="res://Textures/Bricks/normal.tga"
+dest_files=["res://.godot/imported/normal.tga-7763ea122af3c3d3a8dbdf065cc0edec.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://tile1/normal.tga"
+roughness/src_normal="res://Bricks/normal.tga"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

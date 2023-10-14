@@ -1,0 +1,77 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxu48hee21vmv"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uokl1"]
+size = Vector2(100, 100)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f82e8"]
+albedo_color = Color(0.25098, 0.360784, 0.14902, 1)
+metallic = 1.0
+metallic_specular = 0.25
+roughness = 0.53
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f1xkj"]
+size = Vector3(100, 0, 100)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6uopa"]
+
+[sub_resource type="Sky" id="Sky_y3hu5"]
+sky_material = SubResource("ProceduralSkyMaterial_6uopa")
+
+[sub_resource type="Environment" id="Environment_7jhba"]
+background_mode = 2
+background_energy_multiplier = 0.3
+sky = SubResource("Sky_y3hu5")
+ambient_light_source = 3
+ambient_light_energy = 4.96
+tonemap_mode = 2
+tonemap_exposure = 0.78
+tonemap_white = 1.22
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_levels/1 = 1.03
+glow_levels/3 = 0.0
+glow_levels/4 = 0.45
+glow_intensity = 0.4
+glow_strength = 0.91
+glow_bloom = 1.0
+glow_blend_mode = 0
+glow_hdr_threshold = 1.46
+glow_hdr_scale = 1.15
+glow_hdr_luminance_cap = 125.27
+glow_map_strength = 0.25
+fog_light_color = Color(0.345098, 0.376471, 0.423529, 1)
+fog_light_energy = 0.29
+fog_sun_scatter = 0.73
+fog_density = 0.0366
+fog_height_density = 2.0
+volumetric_fog_density = 0.0885
+volumetric_fog_albedo = Color(0.509804, 0.203922, 0.407843, 1)
+volumetric_fog_emission = Color(0.145098, 0.145098, 0.145098, 1)
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_gi_inject = 1.05
+volumetric_fog_anisotropy = -0.07
+volumetric_fog_length = 14.4
+volumetric_fog_detail_spread = 1.66435
+volumetric_fog_sky_affect = 0.336
+
+[node name="Ground" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_uokl1")
+surface_material_override/0 = SubResource("StandardMaterial3D_f82e8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_f1xkj")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.812216, 0.576449, -0.0895066, -0.0936, 0.280223, 0.955361, 0.575799, -0.767581, 0.281557, -13.6404, 27.7596, 32.8108)
+light_energy = 0.091
+light_indirect_energy = 0.529
+shadow_enabled = true
+directional_shadow_blend_splits = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7jhba")

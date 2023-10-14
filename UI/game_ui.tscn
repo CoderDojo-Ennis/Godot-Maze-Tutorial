@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8oy3bahchylf"]
+
+[ext_resource type="Theme" uid="uid://ri7s4uupp31y" path="res://Settings/TextTheme.tres" id="1_takp2"]
+[ext_resource type="Script" path="res://UI/TimeValue.gd" id="2_hwlrm"]
+[ext_resource type="Script" path="res://UI/LevelCompleteText.gd" id="3_0735p"]
+
+[sub_resource type="RichTextEffect" id="RichTextEffect_u4e4b"]
+
+[sub_resource type="Theme" id="Theme_0cr4n"]
+default_base_scale = 1.18
+default_font_size = 46
+
+[node name="GameUI" type="CanvasLayer"]
+
+[node name="CanvasGroup" type="CanvasGroup" parent="."]
+
+[node name="TimeLabel" type="RichTextLabel" parent="CanvasGroup"]
+clip_contents = false
+offset_right = 117.0
+offset_bottom = 37.0
+theme = ExtResource("1_takp2")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 3
+theme_override_constants/line_separation = 3
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/normal_font_size = 27
+text = "Time:"
+fit_content = true
+custom_effects = [SubResource("RichTextEffect_u4e4b")]
+
+[node name="TimeValue" type="RichTextLabel" parent="CanvasGroup"]
+clip_contents = false
+offset_left = 92.0
+offset_right = 177.0
+offset_bottom = 37.0
+theme = ExtResource("1_takp2")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 3
+theme_override_constants/line_separation = 3
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/normal_font_size = 27
+text = "0.0
+"
+fit_content = true
+custom_effects = [SubResource("RichTextEffect_u4e4b")]
+script = ExtResource("2_hwlrm")
+
+[node name="LevelCompleteText" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -3.0
+offset_right = 218.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = SubResource("Theme_0cr4n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.87451)
+theme_override_colors/font_outline_color = Color(0.34902, 0.101961, 0.0823529, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 19
+theme_override_constants/outline_size = 10
+text = "LEVEL COMPLETED!"
+fit_content = true
+script = ExtResource("3_0735p")

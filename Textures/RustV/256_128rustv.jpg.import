@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cifeansvnhyho"
-path.s3tc="res://.godot/imported/256_128rustv_glow.jpg-18dce7f4176dc7a7f84cbd95042711e8.s3tc.ctex"
+uid="uid://b2xdanvqmghr2"
+path.s3tc="res://.godot/imported/256_128rustv.jpg-56e18d9193ab8a025818b8037147a5c7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://256_128rustv_glow.jpg"
-dest_files=["res://.godot/imported/256_128rustv_glow.jpg-18dce7f4176dc7a7f84cbd95042711e8.s3tc.ctex"]
+source_file="res://Textures/RustV/256_128rustv.jpg"
+dest_files=["res://.godot/imported/256_128rustv.jpg-56e18d9193ab8a025818b8037147a5c7.s3tc.ctex"]
 
 [params]
 

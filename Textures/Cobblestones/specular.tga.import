@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gutgifoh7dv4"
-path.s3tc="res://.godot/imported/diffuse.tga-84e169cccd1faf7d2d14437e5931fd6a.s3tc.ctex"
+uid="uid://dn7uk2p5b8ugu"
+path.s3tc="res://.godot/imported/specular.tga-172fc70252e73bc5c4e35c92f6ae2bba.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://tile1/diffuse.tga"
-dest_files=["res://.godot/imported/diffuse.tga-84e169cccd1faf7d2d14437e5931fd6a.s3tc.ctex"]
+source_file="res://Textures/Cobblestones/specular.tga"
+dest_files=["res://.godot/imported/specular.tga-172fc70252e73bc5c4e35c92f6ae2bba.s3tc.ctex"]
 
 [params]
 

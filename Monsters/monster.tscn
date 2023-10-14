@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccvyadiv6s3ai"]
 
-[ext_resource type="Script" path="res://Monster.gd" id="1_8v75g"]
+[ext_resource type="Script" path="res://Monsters/Monster.gd" id="1_8v75g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hsory"]
 shading_mode = 2
@@ -18,9 +18,8 @@ material = SubResource("StandardMaterial3D_hsory")
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bifi7"]
 
 [node name="Monster" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7579, 2.07934, 10.5062)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 script = ExtResource("1_8v75g")
-SPEED = 5.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -34,3 +33,5 @@ shape = SubResource("CapsuleShape3D_bifi7")
 path_desired_distance = 1.5
 target_desired_distance = 1.5
 path_max_distance = 333.01
+path_postprocessing = 1
+avoidance_enabled = true

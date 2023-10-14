@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drd6ydl1f2cih"
-path.s3tc="res://.godot/imported/specular.tga-be8d5cfb2ae53ef488964636dee98a8b.s3tc.ctex"
+path.s3tc="res://.godot/imported/specular.tga-cb04052878a0b5b216844d32c251bb26.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Bricks/specular.tga"
-dest_files=["res://.godot/imported/specular.tga-be8d5cfb2ae53ef488964636dee98a8b.s3tc.ctex"]
+source_file="res://Textures/Bricks/specular.tga"
+dest_files=["res://.godot/imported/specular.tga-cb04052878a0b5b216844d32c251bb26.s3tc.ctex"]
 
 [params]
 
