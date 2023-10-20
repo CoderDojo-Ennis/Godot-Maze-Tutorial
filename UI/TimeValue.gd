@@ -20,5 +20,5 @@ func _process(delta: float) -> void:
 
 
 # Noticed that the player has left. Stop counting down
-func exit_was_hit():
+func exit_was_hit(exit: Exit):
 	counting_down = false

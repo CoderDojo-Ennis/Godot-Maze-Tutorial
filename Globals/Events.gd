@@ -3,7 +3,7 @@ class_name Events_Class
 extends Node
 
 ## The player found an exit
-signal ExitHit
+signal ExitHit(exit: Exit)
 
 ## The timer has run out
 signal TimeExpired
