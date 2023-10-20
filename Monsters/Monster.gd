@@ -40,6 +40,6 @@ func DoNav(delta: float):
 
 
 ## The player has left the building
-func exit_was_hit(exit: Exit):
+func exit_was_hit(_exit: Exit):
 	# Stop moving
 	Speed = 0.0

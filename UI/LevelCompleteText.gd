@@ -20,7 +20,7 @@ func animation_done(exit: Exit):
 	print("Exiting to " + str(exit.NextLevel))
 
 	var levelFileName = "res://Levels/" + exit.NextLevel+ ".tscn"
-	var nextLevel = load(levelFileName)
+	#var nextLevel = load(levelFileName)
 	#get_tree().change_scene_to_packed() change_scene_with_transition(TRANSITION_TYPE_FADE, 1.0, nextLevel)
 	get_tree().change_scene_to_file(levelFileName)
 

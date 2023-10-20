@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dn7uk2p5b8ugu" path="res://Textures/Cobblestones/specular.tga" id="4_3ijmq"]
 
 [resource]
+cull_mode = 2
 albedo_texture = ExtResource("1_up8gl")
 metallic = 0.22
 roughness = 0.91

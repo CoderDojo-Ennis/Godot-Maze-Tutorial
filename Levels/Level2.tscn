@@ -29,7 +29,7 @@ filter_baking_aabb = AABB(-100, 0, -100, 200, 2, 200)
 
 [node name="Exit" parent="." instance=ExtResource("3_oe4iw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.541, 2.01151, 9.05322)
-NextLevel = "Level1"
+NextLevel = "Level3"
 
 [node name="ExitSecret" parent="." instance=ExtResource("3_oe4iw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37031, 2.01151, 3.33206)

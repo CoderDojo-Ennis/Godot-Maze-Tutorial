@@ -31,6 +31,10 @@ filter_baking_aabb = AABB(-100, 0, -100, 200, 2, 200)
 [node name="Exit" parent="." instance=ExtResource("3_ql3mn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5607, 2.00937, -3.8)
 
+[node name="Exit2" parent="." instance=ExtResource("3_ql3mn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5214, 1.88126, 5.45825)
+NextLevel = "Level3"
+
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["navigation_mesh_source_group"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.46145, 0, 0.0693607)
 navigation_mesh = SubResource("NavigationMesh_x4p6b")

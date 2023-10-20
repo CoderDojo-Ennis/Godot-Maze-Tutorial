@@ -38,3 +38,14 @@ mesh = SubResource("QuadMesh_06hi8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="FloorTile/StaticBody3D" groups=["navigation_mesh_source_group"]]
 shape = SubResource("ConcavePolygonShape3D_ihpug")
+
+[node name="CeilingTile" type="MeshInstance3D" parent="." groups=["navigation_mesh_source_group"]]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+top_level = true
+material_override = ExtResource("2_sjbdf")
+mesh = SubResource("QuadMesh_06hi8")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CeilingTile" groups=["navigation_mesh_source_group"]]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CeilingTile/StaticBody3D" groups=["navigation_mesh_source_group"]]
+shape = SubResource("ConcavePolygonShape3D_ihpug")

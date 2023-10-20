@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://choswkvad7hg8"]
+[gd_scene load_steps=8 format=3 uid="uid://choswkvad7hg8"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_6i20i"]
 [ext_resource type="Script" path="res://UI/TimeValue.gd" id="2_7s257"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aevwc"]
+radius = 0.3
+height = 1.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fh4lg"]
 albedo_color = Color(0.12549, 0.458824, 0.580392, 1)
@@ -17,8 +19,18 @@ proximity_fade_distance = 0.0
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_kekbn"]
 material = SubResource("StandardMaterial3D_fh4lg")
+radius = 0.3
+height = 1.5
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_qi82c"]
+exposure_multiplier = 0.788
+dof_blur_far_distance = 35.56
+dof_blur_far_transition = 0.25
+dof_blur_near_distance = 8.49
+dof_blur_near_transition = 3191.19
+dof_blur_amount = 0.04
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_w6bg8"]
 exposure_multiplier = 0.788
 dof_blur_far_distance = 35.56
 dof_blur_far_transition = 0.25
@@ -29,6 +41,7 @@ dof_blur_amount = 0.04
 [node name="Player" type="CharacterBody3D" groups=["Player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.37977, 3.93609, 7.7022)
 script = ExtResource("1_6i20i")
+JUMP_VELOCITY = 5.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0724437, 0)
@@ -37,9 +50,16 @@ shape = SubResource("CapsuleShape3D_aevwc")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_kekbn")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.383151, 0.923686, 0, -0.923686, 0.383151, 0, 60.7311, 17.6454)
+[node name="Camera3rdPerson" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.383151, 0.923686, 0, -0.923686, 0.383151, 0, 60, 17)
 attributes = SubResource("CameraAttributesPractical_qi82c")
+h_offset = 0.01
+current = true
+fov = 34.5
+
+[node name="Camera1stPerson" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.998135, 0.0610485, 0, -0.0610485, 0.998135, 0, 0.451, 0.0549998)
+attributes = SubResource("CameraAttributesPractical_w6bg8")
 h_offset = 0.01
 current = true
 fov = 34.5

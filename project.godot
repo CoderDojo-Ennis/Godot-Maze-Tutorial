@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Maze2"
-run/main_scene="res://Levels/Level1.tscn"
+config/name="Maze Stuff"
+run/main_scene="res://Levels/Level3.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Settings/icon.png"
 
