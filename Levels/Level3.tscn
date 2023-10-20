@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://bq73p4xfgl7ib"]
+[gd_scene load_steps=26 format=3 uid="uid://bq73p4xfgl7ib"]
 
 [ext_resource type="PackedScene" uid="uid://b8oy3bahchylf" path="res://UI/game_ui.tscn" id="1_cymdx"]
 [ext_resource type="PackedScene" uid="uid://dxu48hee21vmv" path="res://Environment/Ground.tscn" id="2_i564f"]
@@ -7,6 +7,7 @@
 [ext_resource type="MeshLibrary" uid="uid://cbwruetb64wgp" path="res://Meshes/mesh_library.meshlib" id="4_q6cr0"]
 [ext_resource type="PackedScene" uid="uid://choswkvad7hg8" path="res://Player/Player.tscn" id="5_6ehm3"]
 [ext_resource type="PackedScene" uid="uid://ccvyadiv6s3ai" path="res://Monsters/monster.tscn" id="6_pd3kb"]
+[ext_resource type="PackedScene" uid="uid://cu1h0e4sh3gwd" path="res://Meshes/Graveyard/character-ghost.glb" id="8_6t2nu"]
 [ext_resource type="PackedScene" uid="uid://b3cou2y7m6t3s" path="res://Meshes/Graveyard/gravestone-bevel.glb" id="8_108tk"]
 [ext_resource type="PackedScene" uid="uid://svdgjfw3itxf" path="res://Meshes/Graveyard/fence.glb" id="9_nkkfj"]
 [ext_resource type="PackedScene" uid="uid://cvd7bap183epw" path="res://Meshes/Graveyard/pumpkin-tall-carved.glb" id="10_s1lyf"]
@@ -88,6 +89,12 @@ Speed = 111.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7579, 0.5, -7.9709)
 Speed = 111.0
 
+[node name="MeshInstance3D" parent="Monster2" index="0"]
+visible = false
+
+[node name="character-ghost2" parent="Monster2" instance=ExtResource("8_6t2nu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.465576, 0)
+
 [node name="Monster3" parent="." instance=ExtResource("6_pd3kb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4483, 0.5, 14.5764)
 Speed = 111.0
@@ -150,3 +157,5 @@ shape = SubResource("BoxShape3D_f6v7d")
 
 [node name="crypt-large-roof2" parent="." instance=ExtResource("19_dy16i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773565, 1.941, -4.172)
+
+[editable path="Monster2"]

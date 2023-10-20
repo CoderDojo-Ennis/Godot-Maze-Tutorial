@@ -30,11 +30,17 @@ func DoNav(delta: float):
 	nav.target_position = player.global_position
 
 	var direction = Vector3()
-	direction = nav.get_next_path_position() - global_position
+	var next_position = nav.get_next_path_position()
+	direction = next_position - global_position
 	direction.y = 0
 	direction = direction.normalized()
 
 	velocity = direction * Speed * delta
+
+	# Rotate the monster in the direction of movement
+	transform = transform.looking_at(next_position, Vector3.UP, true)
+	rotation.x = 0.0
+	rotation.z = 0.0
 
 	move_and_slide()
 
