@@ -10,3 +10,6 @@ signal TimeExpired
 
 ## A monster is munching on the player
 signal MonsterHitPlayer(Node3D)
+
+## The player has died
+signal PlayerDied(player: Player)

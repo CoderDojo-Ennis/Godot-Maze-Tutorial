@@ -49,3 +49,4 @@ func DoNav(delta: float):
 func exit_was_hit(_exit: Exit):
 	# Stop moving
 	Speed = 0.0
+

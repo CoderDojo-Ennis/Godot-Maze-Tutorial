@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://b8oy3bahchylf"]
+[gd_scene load_steps=7 format=3 uid="uid://b8oy3bahchylf"]
 
 [ext_resource type="Theme" uid="uid://ri7s4uupp31y" path="res://Settings/TextTheme.tres" id="1_takp2"]
 [ext_resource type="Script" path="res://UI/TimeValue.gd" id="2_hwlrm"]
 [ext_resource type="Script" path="res://UI/LevelCompleteText.gd" id="3_0735p"]
+[ext_resource type="Script" path="res://UI/GameOverText.gd" id="4_x5nct"]
 
 [sub_resource type="RichTextEffect" id="RichTextEffect_u4e4b"]
 
@@ -76,4 +77,31 @@ theme_override_constants/outline_size = 10
 text = "LEVEL COMPLETED!"
 fit_content = true
 script = ExtResource("3_0735p")
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverText" type="RichTextLabel" parent="."]
+clip_contents = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -3.0
+offset_right = 218.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme = SubResource("Theme_0cr4n")
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.87451)
+theme_override_colors/font_outline_color = Color(0.34902, 0.101961, 0.0823529, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 19
+theme_override_constants/outline_size = 10
+text = "GAME OVER"
+fit_content = true
+script = ExtResource("4_x5nct")
 metadata/_edit_use_anchors_ = true

@@ -17,17 +17,14 @@ material = SubResource("StandardMaterial3D_hsory")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_bifi7"]
 
-[node name="Monster" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+[node name="Monster" type="CharacterBody3D" groups=["Monsters"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.532462, 0)
 script = ExtResource("1_8v75g")
+metadata/_edit_group_ = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_scrqm")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
-shape = SubResource("CapsuleShape3D_bifi7")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 path_desired_distance = 1.5
@@ -35,3 +32,7 @@ target_desired_distance = 1.5
 path_max_distance = 333.01
 path_postprocessing = 1
 avoidance_enabled = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_bifi7")
