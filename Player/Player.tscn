@@ -60,7 +60,7 @@ transform = Transform3D(1, 0, 0, 0, 0.998135, 0.0610485, 0, -0.0610485, 0.998135
 attributes = SubResource("CameraAttributesPractical_w6bg8")
 h_offset = 0.01
 current = true
-fov = 34.5
+fov = 49.1
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
