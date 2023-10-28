@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://whusmsruj6km"]
+
+[ext_resource type="PackedScene" uid="uid://ccvyadiv6s3ai" path="res://Monsters/monster.tscn" id="1_r4oil"]
+[ext_resource type="PackedScene" uid="uid://cu1h0e4sh3gwd" path="res://Meshes/Graveyard/character-ghost.glb" id="2_0n4kf"]
+
+[node name="Ghost" instance=ExtResource("1_r4oil")]
+
+[node name="MeshInstance3D" parent="." index="0"]
+visible = false
+
+[node name="character-ghost2" parent="." index="3" instance=ExtResource("2_0n4kf")]
+transform = Transform3D(0.865, 0, 0, 0, 0.865, 0, 0, 0, 0.865, 0, -0.187, 0)

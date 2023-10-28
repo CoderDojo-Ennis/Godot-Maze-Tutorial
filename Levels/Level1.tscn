@@ -1,20 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bc87f4ym802ph"]
+[gd_scene load_steps=11 format=3 uid="uid://bc87f4ym802ph"]
 
 [ext_resource type="PackedScene" uid="uid://b8oy3bahchylf" path="res://UI/game_ui.tscn" id="1_j1v4e"]
 [ext_resource type="PackedScene" uid="uid://dxu48hee21vmv" path="res://Environment/Ground.tscn" id="2_cnign"]
 [ext_resource type="PackedScene" uid="uid://322xm6uckudl" path="res://Pickups/Exit.tscn" id="3_ql3mn"]
 [ext_resource type="MeshLibrary" uid="uid://cbwruetb64wgp" path="res://Meshes/mesh_library.meshlib" id="4_2gy3f"]
 [ext_resource type="PackedScene" uid="uid://choswkvad7hg8" path="res://Player/Player.tscn" id="5_6bqtr"]
-[ext_resource type="PackedScene" uid="uid://ccvyadiv6s3ai" path="res://Monsters/monster.tscn" id="6_tj0eq"]
 [ext_resource type="PackedScene" uid="uid://c6cvaea2dw6mp" path="res://Meshes/Graveyard/detail-bowl.glb" id="7_oqy33"]
 [ext_resource type="PackedScene" uid="uid://g7s8nmul7d6c" path="res://Meshes/Graveyard/pine.glb" id="8_lo7ai"]
+[ext_resource type="PackedScene" uid="uid://bhr7liianf7qd" path="res://Monsters/zombie.tscn" id="9_adn3y"]
+[ext_resource type="PackedScene" uid="uid://whusmsruj6km" path="res://Monsters/ghost.tscn" id="10_st7lu"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x4p6b"]
 vertices = PackedVector3Array(16.8, 1.02, 9.5, 18.5, 1.02, 9.5, 18.5, 1.02, 7.7, 18.5, 1.02, -5.5, 18.5, 1.02, -7.4, 16.8, 1.02, -7.4, -5.8, 1.02, -7.4, -7.4, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, 7.3, -7.4, 1.02, 9.5, -5.8, 1.02, 9.5, 18.5, 1.02, 4.3, 18.5, 1.02, 2.6, 15.6, 1.02, 2.6, 15.6, 1.02, 0.5, 18.5, 1.02, 0.5, 18.5, 1.02, -1.5, 15.2, 1.02, 9.5, 16.8, 1.02, 9.5, 18.5, 1.02, 7.7, 18.5, 1.02, -5.5, 16.8, 1.02, -7.4, 15.2, 1.02, -7.4, -4.2, 1.02, -7.4, -5.8, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, 7.3, -5.8, 1.02, 9.5, -4.2, 1.02, 9.5, 18.5, 1.02, 6, 18.5, 1.02, 4.3, 15.6, 1.02, 2.6, 15.2, 1.02, 9.5, 18.5, 1.02, 7.7, 18.5, 1.02, 6, 15.6, 1.02, 0.5, 18.5, 1.02, -1.5, 18.5, 1.02, -3.5, 18.5, 1.02, -3.5, 18.5, 1.02, -5.5, 15.2, 1.02, -7.4, -2.6, 1.02, -7.4, -4.2, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, 7.3, -4.2, 1.02, 9.5, -2.6, 1.02, 9.5, 13.6, 1.02, 9.5, 15.2, 1.02, 9.5, 18.5, 1.02, 6, 18.5, 1.02, -3.5, 15.2, 1.02, -7.4, 13.6, 1.02, -7.4, -2.6, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, -3.2, -7.4, 1.02, 5.2, -7.4, 1.02, 7.3, -2.6, 1.02, 9.5, 18.5, 1.02, 6, 15.6, 1.02, 2.6, 12.7, 1.02, 2.6, 13.6, 1.02, 9.5, 18.5, 1.02, 6, 12.7, 1.02, 2.6, 12, 1.02, 9.5, 13.6, 1.02, 9.5, 12.7, 1.02, 2.6, 12.7, 1.02, 0.5, 15.6, 1.02, 0.5, 18.5, 1.02, -3.5, 12, 1.02, 9.5, 12.7, 1.02, 2.6, 9.8, 1.02, 2.6, 10.3, 1.02, 9.5, 12, 1.02, 9.5, 9.8, 1.02, 2.6, 8.7, 1.02, 9.5, 10.3, 1.02, 9.5, 9.8, 1.02, 2.6, 8.7, 1.02, 9.5, 9.8, 1.02, 2.6, 6.9, 1.02, 2.6, 7.1, 1.02, 9.5, 8.7, 1.02, 9.5, 6.9, 1.02, 2.6, 5.5, 1.02, 9.5, 7.1, 1.02, 9.5, 6.9, 1.02, 2.6, 3.8, 1.02, 9.5, 5.5, 1.02, 9.5, 6.9, 1.02, 2.6, 18.5, 1.02, -3.5, 13.6, 1.02, -7.4, 12, 1.02, -7.4, -1, 1.02, -7.4, -2.6, 1.02, -7.4, -7.4, 1.02, -3.2, -7.4, 1.02, 5.2, -2.6, 1.02, 9.5, -1, 1.02, 9.5, 12.7, 1.02, 0.5, 18.5, 1.02, -3.5, 12, 1.02, -7.4, 9.8, 1.02, 0.5, 12.7, 1.02, 0.5, 12, 1.02, -7.4, 9.8, 1.02, 0.5, 12, 1.02, -7.4, 10.3, 1.02, -7.4, 9.8, 1.02, 0.5, 10.3, 1.02, -7.4, 8.7, 1.02, -7.4, 6.9, 1.02, 0.5, 9.8, 1.02, 0.5, 8.7, 1.02, -7.4, 6.9, 1.02, 0.5, 8.7, 1.02, -7.4, 7.1, 1.02, -7.4, 6.9, 1.02, 0.5, 7.1, 1.02, -7.4, 5.5, 1.02, -7.4, 2.2, 1.02, 9.5, 3.8, 1.02, 9.5, 6.9, 1.02, 2.6, 6.5, 1.02, 0.900002, 6.9, 1.02, 0.5, 5.5, 1.02, -7.4, 6.5, 1.02, 0.900002, 5.5, 1.02, -7.4, 3.8, 1.02, -7.4, -1, 1.02, -7.4, -7.4, 1.02, -3.2, -7.4, 1.02, -1.1, -7.4, 1.02, 3.1, -7.4, 1.02, 5.2, -1, 1.02, 9.5, 0.599998, 1.02, 9.5, 2.2, 1.02, 9.5, 6.9, 1.02, 2.6, 6.5, 1.02, 0.900002, 3.8, 1.02, -7.4, 2.2, 1.02, -7.4, 0.599998, 1.02, -7.4, -1, 1.02, -7.4, -7.4, 1.02, -1.1, 6.5, 1.02, 0.900002, 2.2, 1.02, -7.4, 0.599998, 1.02, -7.4, -7.4, 1.02, 3.1, -1, 1.02, 9.5, 0.599998, 1.02, 9.5, 0.599998, 1.02, 9.5, 6.9, 1.02, 2.6, 6.5, 1.02, 0.900002, 0.599998, 1.02, -7.4, -7.4, 1.02, -1.1, -7.4, 1.02, 1, -7.4, 1.02, 1, -7.4, 1.02, 3.1, 0.599998, 1.02, 9.5, -7.4, 1.02, 1, 0.599998, 1.02, 9.5, 6.5, 1.02, 0.900002, -7.4, 1.02, 1, 6.5, 1.02, 0.900002, 0.599998, 1.02, -7.4)
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(8, 7, 6), PackedInt32Array(11, 10, 9), PackedInt32Array(14, 13, 12), PackedInt32Array(17, 16, 15), PackedInt32Array(20, 19, 18), PackedInt32Array(23, 22, 21), PackedInt32Array(26, 25, 24), PackedInt32Array(29, 28, 27), PackedInt32Array(32, 31, 30), PackedInt32Array(35, 34, 33), PackedInt32Array(38, 37, 36), PackedInt32Array(41, 40, 39), PackedInt32Array(44, 43, 42), PackedInt32Array(47, 46, 45), PackedInt32Array(50, 49, 48), PackedInt32Array(53, 52, 51), PackedInt32Array(56, 55, 54), PackedInt32Array(59, 58, 57), PackedInt32Array(62, 61, 60), PackedInt32Array(65, 64, 63), PackedInt32Array(67, 66, 68), PackedInt32Array(71, 70, 69), PackedInt32Array(74, 73, 72), PackedInt32Array(76, 75, 77), PackedInt32Array(80, 79, 78), PackedInt32Array(83, 82, 81), PackedInt32Array(86, 85, 84), PackedInt32Array(87, 89, 88), PackedInt32Array(92, 91, 90), PackedInt32Array(95, 94, 93), PackedInt32Array(98, 97, 96), PackedInt32Array(101, 100, 99), PackedInt32Array(104, 103, 102), PackedInt32Array(107, 106, 105), PackedInt32Array(110, 109, 108), PackedInt32Array(113, 112, 111), PackedInt32Array(116, 115, 114), PackedInt32Array(119, 118, 117), PackedInt32Array(122, 121, 120), PackedInt32Array(125, 124, 123), PackedInt32Array(126, 128, 127), PackedInt32Array(131, 130, 129), PackedInt32Array(134, 133, 132), PackedInt32Array(136, 135, 137), PackedInt32Array(140, 139, 138), PackedInt32Array(143, 142, 141), PackedInt32Array(146, 145, 144), PackedInt32Array(149, 148, 147), PackedInt32Array(152, 151, 150), PackedInt32Array(155, 154, 153), PackedInt32Array(158, 157, 156), PackedInt32Array(161, 160, 159), PackedInt32Array(163, 162, 164), PackedInt32Array(167, 166, 165)]
 sample_partition_type = 1
-cell_size = 0.1
-cell_height = 0.01
 agent_height = 1.0
 region_min_size = 1.0
 region_merge_size = 2.0
@@ -55,13 +54,18 @@ metadata/_editor_floor_ = Vector3(0, 0, 0)
 [node name="Player" parent="." instance=ExtResource("5_6bqtr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.485965, 3.93609, 1.6635)
 
-[node name="Monster" parent="." instance=ExtResource("6_tj0eq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.2773, 2.13021, 8.78424)
-
 [node name="detail-bowl2" parent="." instance=ExtResource("7_oqy33")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.79583, 1.36218, -7.19055)
 
 [node name="pine2" parent="." instance=ExtResource("8_lo7ai")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81631, 1.00366, -6.98401)
+
+[node name="Zombie" parent="." instance=ExtResource("9_adn3y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.47476, 1.01636, -4.81125)
+Speed = 50.0
+
+[node name="Ghost" parent="." instance=ExtResource("10_st7lu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8056, 1.00006, 3.81082)
+Speed = 40.0
 
 [editable path="Player"]

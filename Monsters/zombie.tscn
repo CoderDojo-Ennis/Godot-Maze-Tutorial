@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhr7liianf7qd"]
+
+[ext_resource type="PackedScene" uid="uid://ccvyadiv6s3ai" path="res://Monsters/monster.tscn" id="1_en4mm"]
+[ext_resource type="PackedScene" uid="uid://cgyg2tjs8dbp4" path="res://Meshes/Graveyard/character-zombie.glb" id="2_rwnu6"]
+
+[node name="Zombie" instance=ExtResource("1_en4mm")]
+
+[node name="MeshInstance3D" parent="." index="0"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.543013, 0)
+visible = false
+
+[node name="CollisionShape3D" parent="." index="2"]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.543014, 0)
+
+[node name="character-zombie2" parent="." index="3" instance=ExtResource("2_rwnu6")]
+transform = Transform3D(1, 0, 0, 0, 0.634255, 0, 0, 0, 0.951234, 0.0222168, 0.0441719, -0.00920352)

@@ -6,8 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://b2xdanvqmghr2" path="res://Textures/RustV/256_128rustv.jpg" id="4_llvwa"]
 [ext_resource type="MeshLibrary" uid="uid://cbwruetb64wgp" path="res://Meshes/mesh_library.meshlib" id="4_q6cr0"]
 [ext_resource type="PackedScene" uid="uid://choswkvad7hg8" path="res://Player/Player.tscn" id="5_6ehm3"]
-[ext_resource type="PackedScene" uid="uid://ccvyadiv6s3ai" path="res://Monsters/monster.tscn" id="6_pd3kb"]
-[ext_resource type="PackedScene" uid="uid://cu1h0e4sh3gwd" path="res://Meshes/Graveyard/character-ghost.glb" id="8_6t2nu"]
 [ext_resource type="PackedScene" uid="uid://b3cou2y7m6t3s" path="res://Meshes/Graveyard/gravestone-bevel.glb" id="8_108tk"]
 [ext_resource type="PackedScene" uid="uid://svdgjfw3itxf" path="res://Meshes/Graveyard/fence.glb" id="9_nkkfj"]
 [ext_resource type="PackedScene" uid="uid://cvd7bap183epw" path="res://Meshes/Graveyard/pumpkin-tall-carved.glb" id="10_s1lyf"]
@@ -20,6 +18,8 @@
 [ext_resource type="PackedScene" uid="uid://2ja6br6355iv" path="res://Meshes/Graveyard/lantern-candle.glb" id="17_cfloj"]
 [ext_resource type="PackedScene" uid="uid://23jqmpqemd4" path="res://Meshes/Graveyard/crypt-large.glb" id="18_d37fm"]
 [ext_resource type="PackedScene" uid="uid://d3kjgj05ggv2x" path="res://Meshes/Graveyard/crypt-large-roof.glb" id="19_dy16i"]
+[ext_resource type="PackedScene" uid="uid://whusmsruj6km" path="res://Monsters/ghost.tscn" id="20_g1j3o"]
+[ext_resource type="PackedScene" uid="uid://bhr7liianf7qd" path="res://Monsters/zombie.tscn" id="21_16axl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpl21"]
 albedo_texture = ExtResource("4_llvwa")
@@ -81,24 +81,6 @@ metadata/_editor_floor_ = Vector3(0, -1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25993, 2.37194, 7.70272)
 FirstPerson = true
 
-[node name="Monster" parent="." instance=ExtResource("6_pd3kb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5457, 0.5, 0)
-Speed = 111.0
-
-[node name="Monster2" parent="." instance=ExtResource("6_pd3kb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.7579, 0.5, -7.9709)
-Speed = 111.0
-
-[node name="MeshInstance3D" parent="Monster2" index="0"]
-visible = false
-
-[node name="character-ghost2" parent="Monster2" instance=ExtResource("8_6t2nu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.465576, 0)
-
-[node name="Monster3" parent="." instance=ExtResource("6_pd3kb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.4483, 0.5, 14.5764)
-Speed = 111.0
-
 [node name="gravestone-bevel2" parent="." instance=ExtResource("8_108tk")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.266, 0, 4.755)
 
@@ -158,4 +140,16 @@ shape = SubResource("BoxShape3D_f6v7d")
 [node name="crypt-large-roof2" parent="." instance=ExtResource("19_dy16i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773565, 1.941, -4.172)
 
-[editable path="Monster2"]
+[node name="Ghost" parent="." instance=ExtResource("20_g1j3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.08, 0.1, -7.70198)
+Speed = 44.0
+
+[node name="Ghost2" parent="." instance=ExtResource("20_g1j3o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5214, 0.1, 2.64189)
+
+[node name="Zombie" parent="." instance=ExtResource("21_16axl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3357, 0.1, 14.8274)
+Speed = 22.0
+
+[node name="Zombie2" parent="." instance=ExtResource("21_16axl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.687438, 0.1, -5.31687)

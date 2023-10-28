@@ -32,11 +32,11 @@ func set_view_mode():
 	# Choose the camera for the input mode
 	if FirstPerson:
 		camera_1st_person.make_current()
-
-		# Level the camera when switching to 1st person
-		rotation.x = rotation_default.x
 	else:
 		camera_3rd_person.make_current()
+
+	# Level the camera when switching mode
+	rotation.x = rotation_default.x
 
 
 func _input(event: InputEvent) -> void:
@@ -44,10 +44,6 @@ func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("Camera Change")):
 		FirstPerson = !FirstPerson
 		set_view_mode()
-
-	# ESC key to exit the game
-	elif (event.is_action_pressed("Exit")):
-		get_tree().quit()
 
 	elif event is InputEventMouseMotion:
 		yaw -= event.relative.x * mouse_sensitivity
