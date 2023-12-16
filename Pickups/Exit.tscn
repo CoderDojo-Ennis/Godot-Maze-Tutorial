@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://322xm6uckudl"]
+[gd_scene load_steps=7 format=3 uid="uid://322xm6uckudl"]
 
 [ext_resource type="Script" path="res://Pickups/Exit.gd" id="1_2eox0"]
+[ext_resource type="PackedScene" uid="uid://bpsfjofwm4xn7" path="res://Minimap/MinmapProxy.tscn" id="2_m13ai"]
+[ext_resource type="PackedScene" uid="uid://b8icgl4dxavwm" path="res://Minimap/Markers/MinimapExitMarker.tscn" id="3_g6xim"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fgygh"]
 albedo_color = Color(0.819608, 0.321569, 1, 1)
@@ -21,5 +23,9 @@ script = ExtResource("1_2eox0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0249767, 0)
 shape = SubResource("BoxShape3D_k05lb")
+
+[node name="MinmapProxy" parent="." instance=ExtResource("2_m13ai")]
+
+[node name="MinimapExitMarker" parent="MinmapProxy" instance=ExtResource("3_g6xim")]
 
 [connection signal="body_entered" from="StaticBody3D" to="." method="_on_static_body_3d_body_entered"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpsfjofwm4xn7"]
+
+[ext_resource type="Script" path="res://Minimap/MinmapProxy.gd" id="1_u6ts3"]
+
+[node name="MinmapProxy" type="Node3D"]
+script = ExtResource("1_u6ts3")

@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://choswkvad7hg8"]
+[gd_scene load_steps=9 format=3 uid="uid://choswkvad7hg8"]
 
 [ext_resource type="Script" path="res://Player/Player.gd" id="1_6i20i"]
+[ext_resource type="PackedScene" uid="uid://bpsfjofwm4xn7" path="res://Minimap/MinmapProxy.tscn" id="2_gi5ck"]
+[ext_resource type="PackedScene" uid="uid://d3uwnhj1t81bp" path="res://Minimap/Markers/MinimapPlayerMarker.tscn" id="3_tntpp"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_aevwc"]
 radius = 0.3
@@ -68,3 +70,8 @@ light_color = Color(0.258824, 0.662745, 0.819608, 1)
 light_energy = 1.276
 light_specular = 1.741
 shadow_enabled = true
+
+[node name="MinmapProxy" parent="." instance=ExtResource("2_gi5ck")]
+CameraFollow = true
+
+[node name="MinimapPlayerMarker" parent="MinmapProxy" instance=ExtResource("3_tntpp")]

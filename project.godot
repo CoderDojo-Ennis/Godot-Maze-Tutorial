@@ -20,6 +20,7 @@ config/icon="res://Settings/icon.png"
 Events="*res://Globals/Events.gd"
 GlobalInput="*res://Globals/GlobalInput.gd"
 XNodes="*res://Globals/XNodes.gd"
+XDelay="*res://Globals/DelayExtensions.gd"
 
 [input]
 

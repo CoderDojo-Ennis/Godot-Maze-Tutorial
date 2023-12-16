@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bc87f4ym802ph"]
+[gd_scene load_steps=17 format=3 uid="uid://bc87f4ym802ph"]
 
 [ext_resource type="PackedScene" uid="uid://b8oy3bahchylf" path="res://UI/game_ui.tscn" id="1_j1v4e"]
 [ext_resource type="PackedScene" uid="uid://dxu48hee21vmv" path="res://Environment/Ground.tscn" id="2_cnign"]
@@ -8,7 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://c6cvaea2dw6mp" path="res://Meshes/Graveyard/detail-bowl.glb" id="7_oqy33"]
 [ext_resource type="PackedScene" uid="uid://g7s8nmul7d6c" path="res://Meshes/Graveyard/pine.glb" id="8_lo7ai"]
 [ext_resource type="PackedScene" uid="uid://bhr7liianf7qd" path="res://Monsters/zombie.tscn" id="9_adn3y"]
+[ext_resource type="PackedScene" uid="uid://b4qna5hsb3u0d" path="res://Monsters/skeleton.tscn" id="10_qjd3e"]
 [ext_resource type="PackedScene" uid="uid://whusmsruj6km" path="res://Monsters/ghost.tscn" id="10_st7lu"]
+[ext_resource type="PackedScene" uid="uid://cvm0aitfik5hg" path="res://Minimap/Minimap.tscn" id="11_ohdaf"]
+[ext_resource type="PackedScene" uid="uid://622wxb0t17wq" path="res://Minimap/MinimapGridLayer.tscn" id="12_0r0jm"]
+[ext_resource type="PackedScene" uid="uid://bg0olp2phf46w" path="res://Minimap/Markers/MinimapWallMarker.tscn" id="13_aqpc2"]
+[ext_resource type="PackedScene" uid="uid://b714lhhk3yqx" path="res://Minimap/Markers/MinimapFloorMarker.tscn" id="14_cdfmx"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_x4p6b"]
 vertices = PackedVector3Array(16.8, 1.02, 9.5, 18.5, 1.02, 9.5, 18.5, 1.02, 7.7, 18.5, 1.02, -5.5, 18.5, 1.02, -7.4, 16.8, 1.02, -7.4, -5.8, 1.02, -7.4, -7.4, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, 7.3, -7.4, 1.02, 9.5, -5.8, 1.02, 9.5, 18.5, 1.02, 4.3, 18.5, 1.02, 2.6, 15.6, 1.02, 2.6, 15.6, 1.02, 0.5, 18.5, 1.02, 0.5, 18.5, 1.02, -1.5, 15.2, 1.02, 9.5, 16.8, 1.02, 9.5, 18.5, 1.02, 7.7, 18.5, 1.02, -5.5, 16.8, 1.02, -7.4, 15.2, 1.02, -7.4, -4.2, 1.02, -7.4, -5.8, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, 7.3, -5.8, 1.02, 9.5, -4.2, 1.02, 9.5, 18.5, 1.02, 6, 18.5, 1.02, 4.3, 15.6, 1.02, 2.6, 15.2, 1.02, 9.5, 18.5, 1.02, 7.7, 18.5, 1.02, 6, 15.6, 1.02, 0.5, 18.5, 1.02, -1.5, 18.5, 1.02, -3.5, 18.5, 1.02, -3.5, 18.5, 1.02, -5.5, 15.2, 1.02, -7.4, -2.6, 1.02, -7.4, -4.2, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, 7.3, -4.2, 1.02, 9.5, -2.6, 1.02, 9.5, 13.6, 1.02, 9.5, 15.2, 1.02, 9.5, 18.5, 1.02, 6, 18.5, 1.02, -3.5, 15.2, 1.02, -7.4, 13.6, 1.02, -7.4, -2.6, 1.02, -7.4, -7.4, 1.02, -5.3, -7.4, 1.02, -3.2, -7.4, 1.02, 5.2, -7.4, 1.02, 7.3, -2.6, 1.02, 9.5, 18.5, 1.02, 6, 15.6, 1.02, 2.6, 12.7, 1.02, 2.6, 13.6, 1.02, 9.5, 18.5, 1.02, 6, 12.7, 1.02, 2.6, 12, 1.02, 9.5, 13.6, 1.02, 9.5, 12.7, 1.02, 2.6, 12.7, 1.02, 0.5, 15.6, 1.02, 0.5, 18.5, 1.02, -3.5, 12, 1.02, 9.5, 12.7, 1.02, 2.6, 9.8, 1.02, 2.6, 10.3, 1.02, 9.5, 12, 1.02, 9.5, 9.8, 1.02, 2.6, 8.7, 1.02, 9.5, 10.3, 1.02, 9.5, 9.8, 1.02, 2.6, 8.7, 1.02, 9.5, 9.8, 1.02, 2.6, 6.9, 1.02, 2.6, 7.1, 1.02, 9.5, 8.7, 1.02, 9.5, 6.9, 1.02, 2.6, 5.5, 1.02, 9.5, 7.1, 1.02, 9.5, 6.9, 1.02, 2.6, 3.8, 1.02, 9.5, 5.5, 1.02, 9.5, 6.9, 1.02, 2.6, 18.5, 1.02, -3.5, 13.6, 1.02, -7.4, 12, 1.02, -7.4, -1, 1.02, -7.4, -2.6, 1.02, -7.4, -7.4, 1.02, -3.2, -7.4, 1.02, 5.2, -2.6, 1.02, 9.5, -1, 1.02, 9.5, 12.7, 1.02, 0.5, 18.5, 1.02, -3.5, 12, 1.02, -7.4, 9.8, 1.02, 0.5, 12.7, 1.02, 0.5, 12, 1.02, -7.4, 9.8, 1.02, 0.5, 12, 1.02, -7.4, 10.3, 1.02, -7.4, 9.8, 1.02, 0.5, 10.3, 1.02, -7.4, 8.7, 1.02, -7.4, 6.9, 1.02, 0.5, 9.8, 1.02, 0.5, 8.7, 1.02, -7.4, 6.9, 1.02, 0.5, 8.7, 1.02, -7.4, 7.1, 1.02, -7.4, 6.9, 1.02, 0.5, 7.1, 1.02, -7.4, 5.5, 1.02, -7.4, 2.2, 1.02, 9.5, 3.8, 1.02, 9.5, 6.9, 1.02, 2.6, 6.5, 1.02, 0.900002, 6.9, 1.02, 0.5, 5.5, 1.02, -7.4, 6.5, 1.02, 0.900002, 5.5, 1.02, -7.4, 3.8, 1.02, -7.4, -1, 1.02, -7.4, -7.4, 1.02, -3.2, -7.4, 1.02, -1.1, -7.4, 1.02, 3.1, -7.4, 1.02, 5.2, -1, 1.02, 9.5, 0.599998, 1.02, 9.5, 2.2, 1.02, 9.5, 6.9, 1.02, 2.6, 6.5, 1.02, 0.900002, 3.8, 1.02, -7.4, 2.2, 1.02, -7.4, 0.599998, 1.02, -7.4, -1, 1.02, -7.4, -7.4, 1.02, -1.1, 6.5, 1.02, 0.900002, 2.2, 1.02, -7.4, 0.599998, 1.02, -7.4, -7.4, 1.02, 3.1, -1, 1.02, 9.5, 0.599998, 1.02, 9.5, 0.599998, 1.02, 9.5, 6.9, 1.02, 2.6, 6.5, 1.02, 0.900002, 0.599998, 1.02, -7.4, -7.4, 1.02, -1.1, -7.4, 1.02, 1, -7.4, 1.02, 1, -7.4, 1.02, 3.1, 0.599998, 1.02, 9.5, -7.4, 1.02, 1, 0.599998, 1.02, 9.5, 6.5, 1.02, 0.900002, -7.4, 1.02, 1, 6.5, 1.02, 0.900002, 0.599998, 1.02, -7.4)
@@ -23,6 +28,20 @@ vertices_per_polygon = 3.0
 detail_sample_distance = 1.0
 filter_baking_aabb = AABB(-100, 0, -100, 200, 2, 200)
 
+[sub_resource type="GDScript" id="GDScript_6qjl5"]
+script/source = "extends Node
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+"
+
 [node name="Level1" type="Node3D"]
 
 [node name="GameUI" parent="." instance=ExtResource("1_j1v4e")]
@@ -30,14 +49,13 @@ filter_baking_aabb = AABB(-100, 0, -100, 200, 2, 200)
 [node name="Ground" parent="." instance=ExtResource("2_cnign")]
 
 [node name="Exit" parent="." instance=ExtResource("3_ql3mn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5607, 2.00937, -3.8)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.696, 2.00937, -3.8)
 
 [node name="Exit2" parent="." instance=ExtResource("3_ql3mn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.5214, 1.88126, 5.45825)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6567, 1.88126, 5.45825)
 NextLevel = "Level3"
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["navigation_mesh_source_group"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.46145, 0, 0.0693607)
 navigation_mesh = SubResource("NavigationMesh_x4p6b")
 metadata/_edit_lock_ = true
 
@@ -51,6 +69,9 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
+[node name="MapGenerator" type="Node3D" parent="NavigationRegion3D"]
+script = SubResource("GDScript_6qjl5")
+
 [node name="Player" parent="." instance=ExtResource("5_6bqtr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.485965, 3.93609, 1.6635)
 
@@ -58,14 +79,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.485965, 3.93609, 1.6635)
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.79583, 1.36218, -7.19055)
 
 [node name="pine2" parent="." instance=ExtResource("8_lo7ai")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.81631, 1.00366, -6.98401)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.02195, 1.00366, -6.98401)
 
 [node name="Zombie" parent="." instance=ExtResource("9_adn3y")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.47476, 1.01636, -4.81125)
 Speed = 50.0
 
 [node name="Ghost" parent="." instance=ExtResource("10_st7lu")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.8056, 1.00006, 3.81082)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.6095, 1.00006, 7.25149)
 Speed = 40.0
+
+[node name="Skeleton" parent="." instance=ExtResource("10_qjd3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.95736, 0.999969, -6.14316)
+
+[node name="Minimap" parent="." instance=ExtResource("11_ohdaf")]
+
+[node name="MinimapGridLayer" parent="Minimap" node_paths=PackedStringArray("Gridmap") instance=ExtResource("12_0r0jm")]
+Gridmap = NodePath("../../NavigationRegion3D/Level1Maze")
+MinimapMarker = ExtResource("13_aqpc2")
+
+[node name="MinimapGridLayer2" parent="Minimap" node_paths=PackedStringArray("Gridmap") instance=ExtResource("12_0r0jm")]
+Gridmap = NodePath("../../NavigationRegion3D/Level1Maze")
+GridmapTileIndex = 1
+MinimapMarker = ExtResource("14_cdfmx")
 
 [editable path="Player"]

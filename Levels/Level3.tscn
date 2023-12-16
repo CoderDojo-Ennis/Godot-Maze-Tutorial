@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://bq73p4xfgl7ib"]
+[gd_scene load_steps=29 format=3 uid="uid://bq73p4xfgl7ib"]
 
 [ext_resource type="PackedScene" uid="uid://b8oy3bahchylf" path="res://UI/game_ui.tscn" id="1_cymdx"]
 [ext_resource type="PackedScene" uid="uid://dxu48hee21vmv" path="res://Environment/Ground.tscn" id="2_i564f"]
@@ -19,7 +19,10 @@
 [ext_resource type="PackedScene" uid="uid://23jqmpqemd4" path="res://Meshes/Graveyard/crypt-large.glb" id="18_d37fm"]
 [ext_resource type="PackedScene" uid="uid://d3kjgj05ggv2x" path="res://Meshes/Graveyard/crypt-large-roof.glb" id="19_dy16i"]
 [ext_resource type="PackedScene" uid="uid://whusmsruj6km" path="res://Monsters/ghost.tscn" id="20_g1j3o"]
+[ext_resource type="PackedScene" uid="uid://cvm0aitfik5hg" path="res://Minimap/Minimap.tscn" id="21_13dcr"]
 [ext_resource type="PackedScene" uid="uid://bhr7liianf7qd" path="res://Monsters/zombie.tscn" id="21_16axl"]
+[ext_resource type="PackedScene" uid="uid://622wxb0t17wq" path="res://Minimap/MinimapGridLayer.tscn" id="21_vmyq4"]
+[ext_resource type="PackedScene" uid="uid://bg0olp2phf46w" path="res://Minimap/Markers/MinimapWallMarker.tscn" id="22_f1iv8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qpl21"]
 albedo_texture = ExtResource("4_llvwa")
@@ -55,16 +58,16 @@ size = Vector3(0.44304, 2.43655, 2.16295)
 [node name="Ground" parent="." instance=ExtResource("2_i564f")]
 
 [node name="Exit" parent="." instance=ExtResource("3_o784v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.6807, 2.01151, 7.65558)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.931, 2.01151, 7.65558)
 NextLevel = "Level1"
 
 [node name="Ceiling" type="MeshInstance3D" parent="."]
-transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 14.7862, 4.52481, 0.0027394)
+transform = Transform3D(50, 0, 0, 0, -2.18557e-06, -50, 0, 50, -2.18557e-06, 8.03653, 4.52481, 0.0027394)
 mesh = SubResource("QuadMesh_1fd4r")
 skeleton = NodePath("")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." groups=["navigation_mesh_source_group"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.461, 0.1, 0.069)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 navigation_mesh = SubResource("NavigationMesh_x4p6b")
 metadata/_edit_lock_ = true
 
@@ -78,50 +81,50 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="Player" parent="." instance=ExtResource("5_6ehm3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.25993, 2.37194, 7.70272)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0096, 2.37194, 7.70272)
 FirstPerson = true
 
 [node name="gravestone-bevel2" parent="." instance=ExtResource("8_108tk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.266, 0, 4.755)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.0157, 0, 4.755)
 
 [node name="fence2" parent="." instance=ExtResource("9_nkkfj")]
-transform = Transform3D(-0.142698, 0, 0.989766, 0, 1, 0, -0.989766, 0, -0.142698, -8.093, 0, 3.328)
+transform = Transform3D(-0.142698, 0, 0.989766, 0, 1, 0, -0.989766, 0, -0.142698, -14.8427, 0, 3.328)
 
 [node name="pumpkin-tall-carved2" parent="." instance=ExtResource("10_s1lyf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.063, 0.178711, 6.639)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.8127, 0.178711, 6.639)
 
 [node name="pumpkin-carved2" parent="." instance=ExtResource("11_thb6q")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.974, 0.262695, 6.038)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.7237, 0.262695, 6.038)
 
 [node name="candle-multiple2" parent="." instance=ExtResource("12_nr188")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.26443, 0.139343, 2.08899)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.0141, 0.139343, 2.08899)
 
 [node name="pine2" parent="." instance=ExtResource("13_rcpn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.9645, 0, 3.4895)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.7142, 0, 3.4895)
 
 [node name="pine3" parent="." instance=ExtResource("13_rcpn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.647, 0, 1.37851)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.3967, 0, 1.37851)
 
 [node name="pine4" parent="." instance=ExtResource("13_rcpn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.8948, -6.10352e-05, 6.25369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.6445, -6.10352e-05, 6.25369)
 
 [node name="pine5" parent="." instance=ExtResource("13_rcpn1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0103, 0, 3.20486)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.76, 0, 3.20486)
 
 [node name="iron-fence2" parent="." instance=ExtResource("14_8kkud")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -10.538, 0, 3.832)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -17.2877, 0, 3.832)
 
 [node name="bench2" parent="." instance=ExtResource("15_rndki")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.3148, 0.099939, 14.6726)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5651, 0.099939, 14.6726)
 
 [node name="grave2" parent="." instance=ExtResource("16_sc8gx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.6667, 0.099939, -5.85207)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.917, 0.099939, -5.85207)
 
 [node name="lantern-candle2" parent="." instance=ExtResource("17_cfloj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.07766, 0.099939, -4.84451)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.82733, 0.099939, -4.84451)
 
 [node name="crypt-large2" parent="." instance=ExtResource("18_d37fm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.651341, 0.1, -4.01837)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.09833, 0.1, -4.01837)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="crypt-large2"]
 
@@ -138,18 +141,25 @@ transform = Transform3D(0.0300326, 0, -0.999549, 0, 1, 0, 0.999549, 0, 0.0300326
 shape = SubResource("BoxShape3D_f6v7d")
 
 [node name="crypt-large-roof2" parent="." instance=ExtResource("19_dy16i")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.773565, 1.941, -4.172)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.97611, 1.941, -4.172)
 
 [node name="Ghost" parent="." instance=ExtResource("20_g1j3o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.08, 0.1, -7.70198)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3303, 0.1, -7.70198)
 Speed = 44.0
 
 [node name="Ghost2" parent="." instance=ExtResource("20_g1j3o")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.5214, 0.1, 2.64189)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.7717, 0.1, 2.64189)
 
 [node name="Zombie" parent="." instance=ExtResource("21_16axl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.3357, 0.1, 14.8274)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.586, 0.1, 14.8274)
 Speed = 22.0
 
 [node name="Zombie2" parent="." instance=ExtResource("21_16axl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.687438, 0.1, -5.31687)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.06224, 0.1, -5.31687)
+
+[node name="Minimap" parent="." instance=ExtResource("21_13dcr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -500, 0, 0)
+
+[node name="MinimapGridLayer" parent="Minimap" node_paths=PackedStringArray("Gridmap") instance=ExtResource("21_vmyq4")]
+Gridmap = NodePath("../../NavigationRegion3D/Maze")
+MinimapMarker = ExtResource("22_f1iv8")
